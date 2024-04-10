@@ -1,8 +1,20 @@
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Input from "./pages/Input";
+import Overview from "./pages/Overview";
+
 function App() {
   return (
-    <div className="App">
-      page
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Input />} />
+          <Route path="/overview" element={<Overview />} />
+          {/* <Route path="/About" element={<About />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

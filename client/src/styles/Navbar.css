@@ -1,0 +1,22 @@
+.links-container li {
+  list-style-type: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  margin-left: 75vw;
+}
+
+.link {
+  margin: 0 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.links-container {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  height: 4rem;
+}
