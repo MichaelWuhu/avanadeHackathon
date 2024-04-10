@@ -1,0 +1,13 @@
+.chat-card {
+  height: fit-content;
+  background-color: rgb(21, 38, 63);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.user {
+    font-weight: bold;
+    text-decoration: underline;
+}
