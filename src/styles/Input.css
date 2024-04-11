@@ -29,10 +29,34 @@
   padding: 1rem;
 }
 
-.user-input {
-  height: 3rem;
+.inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-top: 1rem;
+}
+
+.user-input {
+  width: 95%;
+  height: 3rem;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.micButtonContainer {
+  /* width: 10%; */
+  height: 3rem;
+  background: white;
+  margin-left: 1rem;
+  border-radius: 50%;
+}
+
+.micButton {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
 }
