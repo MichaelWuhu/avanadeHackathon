@@ -12,23 +12,26 @@
 .chat {
   display: flex;
   flex-direction: column;
-  background-color: rgba(32, 43, 93, 0.497);
-  min-height: 35rem;
-  width: 70vw;
-  border: 2px solid black;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   margin-bottom: 5rem;
+  width: 90%;
 }
 
 .chat-history {
-    min-height: 35rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(32, 43, 93, 0.497);
+  height: 70vh;
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
 }
 
 .user-input {
-  height: 2rem;
-  /* margin-top: 32rem; */
+  height: 3rem;
+  margin-top: 1rem;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
