@@ -8,7 +8,7 @@ const Navbar = () => {
       <ul className="links">
         <li>
           <Link className="link" to="/">
-            Inputs
+            Journal
           </Link>
         </li>
         <li>
