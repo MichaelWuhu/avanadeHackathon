@@ -1,26 +1,43 @@
 import "../styles/Input.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/Input.css";
 
 import ChatCard from "../components/ChatCard";
 import micButton from "../assets/micButton.png";
 
 function Input() {
-  const [inputValue, setInputValue] = useState(); // Add state for inputValue
+  const [messages, setMessages] = useState([]); // Add state for messages
 
-  const [messages, setMessages] = useState([
-    // {
-    //   role: "system",
-    //   content: "You're a therapist empowering maternal metnal health.",
-    // },
-  ]); // Add state for messages
+
+  useEffect(() => {
+    const storedMessages = localStorage.getItem("messages");
+    console.log("Messages in localStorage:", localStorage.getItem("messages"));
+    console.log(storedMessages);
+    if (storedMessages) {
+      setMessages(JSON.parse(storedMessages)); // this doesn't work for some reason
+    }
+    console.log("messages", messages)
+  }, []);
+
+
+  // UNCOMMENT THIS IF THE ABOVE USEEFFECT WORKS
+  //
+  // useEffect(() => {
+  //   localStorage.setItem("messages", JSON.stringify(messages));
+  //   console.log("Messages in localStorage:", localStorage.getItem("messages"));
+  // }, [messages]);
 
   const handleUserInput = (event) => {
     if (event.keyCode === 13) {
       const value = event.target.value;
-      setInputValue(value); // Update inputValue state
       setMessages((prevMessages) => [...prevMessages, value]); // Add value to messages array
       event.target.value = "";
+
+      // Log localStorage after setting messages
+      console.log(
+        "Messages in localStorage:",
+        localStorage.getItem("messages")
+      );
     }
   };
 
